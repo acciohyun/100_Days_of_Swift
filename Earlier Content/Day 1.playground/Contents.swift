@@ -44,5 +44,6 @@ class Solution {
 }
 
 let solution = Solution()
-//print(solution.encode(["Hello","World"]))
-print(solution.decode(solution.encode([""])))
+print(solution.encode(["Hello","World"]))
+print(solution.decode(solution.encode(["Hello","World"])))
+//print(solution.decode(solution.encode([""])))
