@@ -16,10 +16,23 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         if let name = flagName{
             title = name.dropLast(7).uppercased()
-            imageView.image = UIImage(named: name)
+            let image = UIImage(named: name)
+            imageView.image = image
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         }
     }
     
+    @objc func shareTapped(){
+        guard let image = imageView.image?.jpegData(compressionQuality: 0.8) else {
+            print("No image to share")
+            return
+        }
+        let ac = UIActivityViewController(activityItems: [image], applicationActivities: [])
+        ac.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(ac, animated: true)
+        
+        
+    }
 
     /*
     // MARK: - Navigation
