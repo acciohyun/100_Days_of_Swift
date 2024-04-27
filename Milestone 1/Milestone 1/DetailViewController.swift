@@ -8,13 +8,16 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet var imageView: UIImageView!
     var flagName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let name = flagName{
-            title = name
+            title = name.dropLast(7).uppercased()
+            imageView.image = UIImage(named: name)
         }
-        // Do any additional setup after loading the view.
     }
     
 
