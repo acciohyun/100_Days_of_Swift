@@ -16,6 +16,7 @@
 		6B0019A32BE230FD00ED923D /* Project_5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0019A22BE230FD00ED923D /* Project_5Tests.swift */; };
 		6B0019AD2BE230FD00ED923D /* Project_5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0019AC2BE230FD00ED923D /* Project_5UITests.swift */; };
 		6B0019AF2BE230FD00ED923D /* Project_5UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0019AE2BE230FD00ED923D /* Project_5UITestsLaunchTests.swift */; };
+		6B0019BE2BE2354500ED923D /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B0019BD2BE2354400ED923D /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6B0019A82BE230FD00ED923D /* Project 5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project 5UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0019AC2BE230FD00ED923D /* Project_5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_5UITests.swift; sourceTree = "<group>"; };
 		6B0019AE2BE230FD00ED923D /* Project_5UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_5UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B0019BD2BE2354400ED923D /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = start.txt; path = ../../../../Downloads/start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				6B0019912BE230FA00ED923D /* Main.storyboard */,
 				6B0019942BE230FD00ED923D /* Assets.xcassets */,
 				6B0019962BE230FD00ED923D /* LaunchScreen.storyboard */,
+				6B0019BD2BE2354400ED923D /* start.txt */,
 				6B0019992BE230FD00ED923D /* Info.plist */,
 			);
 			path = "Project 5";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B0019952BE230FD00ED923D /* Assets.xcassets in Resources */,
+				6B0019BE2BE2354500ED923D /* start.txt in Resources */,
 				6B0019982BE230FD00ED923D /* Base in Resources */,
 				6B0019932BE230FA00ED923D /* Base in Resources */,
 			);
