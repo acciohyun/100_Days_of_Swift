@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UITableViewController {
     var petitions = [Petition]()
-    
+    var filtered = [Petition]()
+    var filter = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let urlString: String
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Credits", style: .plain, target: self, action: #selector(showCredits))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(showFilterAlert))
+        print("shown")
+        
         if navigationController?.tabBarItem.tag == 0{
             urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         }else{
@@ -29,12 +35,23 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petitions.count
+        if filtered.isEmpty{
+            return petitions.count
+        }else{
+            return filtered.count
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let petition = petitions[indexPath.row]
+        let petition: Petition
+        if filtered.isEmpty{
+             petition = petitions[indexPath.row]
+        }else{
+            petition = filtered[indexPath.row]
+        }
+//        let petition = petitions[indexPath.row]
         cell.textLabel?.text = petition.title
         cell.detailTextLabel?.text = petition.body
         return cell
@@ -58,6 +75,33 @@ class ViewController: UITableViewController {
     func showError(){
         let ac = UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    @objc func showCredits(){
+        let ac = UIAlertController(title: "Credits", message: "The following information are from We The People API", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
+    }
+    
+    @objc func showFilterAlert(){
+        let ac = UIAlertController(title: "Filter", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        let removeFilter = UIAlertAction(title: "Remove Filter", style: .default){ [weak self, weak ac] action in
+            self?.filter = ""
+            self?.filtered = []
+            self?.tableView.reloadData()
+        }
+        let addFilter = UIAlertAction(title: "Add", style: .default){ [weak self, weak ac] action in
+            guard let answer = ac?.textFields?[0].text else{ return }
+            self?.filter = answer
+            if let petitions = self?.petitions{
+                self?.filtered = petitions.filter({$0.title.contains(self?.filter ?? "")})
+                self?.tableView.reloadData()
+            }
+        }
+        ac.addAction(removeFilter)
+        ac.addAction(addFilter)
         present(ac, animated: true)
     }
 }
