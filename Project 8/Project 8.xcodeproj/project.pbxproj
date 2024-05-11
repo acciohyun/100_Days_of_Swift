@@ -16,6 +16,7 @@
 		6B5448C72BEF15A500DE39BE /* Project_8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5448C62BEF15A500DE39BE /* Project_8Tests.swift */; };
 		6B5448D12BEF15A500DE39BE /* Project_8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5448D02BEF15A500DE39BE /* Project_8UITests.swift */; };
 		6B5448D32BEF15A500DE39BE /* Project_8UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5448D22BEF15A500DE39BE /* Project_8UITestsLaunchTests.swift */; };
+		6B5448E02BEF1F5800DE39BE /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6B5448DF2BEF1F5800DE39BE /* level1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6B5448CC2BEF15A500DE39BE /* Project 8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project 8UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5448D02BEF15A500DE39BE /* Project_8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_8UITests.swift; sourceTree = "<group>"; };
 		6B5448D22BEF15A500DE39BE /* Project_8UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_8UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B5448DF2BEF1F5800DE39BE /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		6B5448AE2BEF15A400DE39BE /* Project 8 */ = {
 			isa = PBXGroup;
 			children = (
+				6B5448DF2BEF1F5800DE39BE /* level1.txt */,
 				6B5448AF2BEF15A400DE39BE /* AppDelegate.swift */,
 				6B5448B12BEF15A400DE39BE /* SceneDelegate.swift */,
 				6B5448B32BEF15A400DE39BE /* ViewController.swift */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5448B92BEF15A500DE39BE /* Assets.xcassets in Resources */,
+				6B5448E02BEF1F5800DE39BE /* level1.txt in Resources */,
 				6B5448BC2BEF15A500DE39BE /* Base in Resources */,
 				6B5448B72BEF15A400DE39BE /* Base in Resources */,
 			);
