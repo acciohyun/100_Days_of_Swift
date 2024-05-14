@@ -74,6 +74,8 @@ class ViewController: UIViewController {
         let buttonsView = UIView()
         buttonsView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(buttonsView)
+        buttonsView.layer.borderWidth = 1
+        buttonsView.layer.borderColor = UIColor.lightGray.cgColor
         
         var activatedButtons = [UIButton]()
         var solutions = [String]()
@@ -155,6 +157,11 @@ class ViewController: UIViewController {
                 present(ac, animated: true)
             }
             
+        }else{
+            let ac = UIAlertController(title: "Wrong Answer", message: nil, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            currentAnswer.text = ""
         }
     }
     

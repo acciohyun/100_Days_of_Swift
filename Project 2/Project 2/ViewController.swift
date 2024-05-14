@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             title = "Wrong, this is the flag of \(countries[sender.tag].uppercased())"
         }
         questionCount += 1
-        
+        1
         if questionCount == 10{
             let ac = UIAlertController(title: title, message: "Your final score is \(score)", preferredStyle: .alert)
             present(ac, animated: true)
