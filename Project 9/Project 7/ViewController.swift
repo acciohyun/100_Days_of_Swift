@@ -96,16 +96,24 @@ class ViewController: UITableViewController {
         let ac = UIAlertController(title: "Filter", message: nil, preferredStyle: .alert)
         ac.addTextField()
         let removeFilter = UIAlertAction(title: "Remove Filter", style: .default){ [weak self, weak ac] action in
-            self?.filter = ""
-            self?.filtered = []
-            self?.tableView.reloadData()
+            DispatchQueue.global(qos: .userInitiated).async{
+                self?.filter = ""
+                self?.filtered = []
+                DispatchQueue.main.async{
+                    self?.tableView.reloadData()
+                }
+            }
         }
         let addFilter = UIAlertAction(title: "Add", style: .default){ [weak self, weak ac] action in
-            guard let answer = ac?.textFields?[0].text else{ return }
-            self?.filter = answer
-            if let petitions = self?.petitions{
-                self?.filtered = petitions.filter({$0.title.contains(self?.filter ?? "")})
-                self?.tableView.reloadData()
+            DispatchQueue.global(qos: .userInitiated).async{
+                guard let answer = ac?.textFields?[0].text else{ return }
+                self?.filter = answer
+                if let petitions = self?.petitions{
+                    self?.filtered = petitions.filter({$0.title.contains(self?.filter ?? "")})
+                    DispatchQueue.main.async{
+                        self?.tableView.reloadData()
+                    }
+                }
             }
         }
         ac.addAction(removeFilter)
