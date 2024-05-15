@@ -11,7 +11,7 @@ class ViewController: UITableViewController {
     var petitions = [Petition]()
     var filtered = [Petition]()
     var filter = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let urlString: String
@@ -25,13 +25,16 @@ class ViewController: UITableViewController {
         }else{
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
-        if let url = URL(string: urlString){
-            if let data = try? Data(contentsOf: url){
-                parse(json: data)
-                return
+        DispatchQueue.global(qos: .userInitiated).async {
+            //sends the task to other queues to be resolved
+            if let url = URL(string: urlString) {
+                if let data = try? Data(contentsOf: url) {
+                    self.parse(json: data)
+                    return
+                }
             }
+            self.showError()
         }
-        showError()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,11 +50,11 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let petition: Petition
         if filtered.isEmpty{
-             petition = petitions[indexPath.row]
+            petition = petitions[indexPath.row]
         }else{
             petition = filtered[indexPath.row]
         }
-//        let petition = petitions[indexPath.row]
+        //        let petition = petitions[indexPath.row]
         cell.textLabel?.text = petition.title
         cell.detailTextLabel?.text = petition.body
         return cell
@@ -68,14 +71,19 @@ class ViewController: UITableViewController {
         
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json){
             petitions = jsonPetitions.results
-            tableView.reloadData()
+            //            tableView.reloadData()
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
         }
     }
     
     func showError(){
-        let ac = UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
+        DispatchQueue.main.async{
+            let ac = UIAlertController(title: "Error", message: nil, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(ac, animated: true)
+        }
     }
     
     @objc func showCredits(){
