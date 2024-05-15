@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     var activatedButtons = [UIButton]()
     var solutions = [String]()
-
+    
     var score = 0 {
         didSet{
             scoreLabel.text = "Score: \(score)"
@@ -83,21 +83,21 @@ class ViewController: UIViewController {
         var score = 0
         var level = 1
         
-        NSLayoutConstraint.activate([scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor), scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
-            cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
-            cluesLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6, constant: -100),
-            answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
-            answersLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
-            answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.4, constant: -100),
-            answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor),
-                                    currentAnswer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        NSLayoutConstraint.activate([scoreLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),       scoreLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+                                     cluesLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
+                                     cluesLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
+                                     cluesLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.6, constant: -100),
+                                     answersLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor),
+                                     answersLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 100),
+                                     answersLabel.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.4, constant: -100),
+                                     answersLabel.heightAnchor.constraint(equalTo: cluesLabel.heightAnchor),
+                                     currentAnswer.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                                      currentAnswer.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
                                      currentAnswer.topAnchor.constraint(equalTo: cluesLabel.bottomAnchor, constant: 20),
                                      submit.topAnchor.constraint(equalTo: currentAnswer.bottomAnchor),
                                      submit.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -100),
                                      submit.heightAnchor.constraint(equalToConstant: 44),
-
+                                     
                                      clear.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 100),
                                      clear.centerYAnchor.constraint(equalTo: submit.centerYAnchor),
                                      clear.heightAnchor.constraint(equalToConstant: 44),
@@ -137,7 +137,7 @@ class ViewController: UIViewController {
         activatedButtons.append(sender)
         sender.isHidden = true
     }
-
+    
     @objc func submitTapped(_ sender: UIButton) {
         guard let answerText = currentAnswer.text else {return}
         
@@ -160,7 +160,7 @@ class ViewController: UIViewController {
         }else{
             let ac = UIAlertController(title: "Wrong Answer", message: nil, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true) 
+            present(ac, animated: true)
             currentAnswer.text = ""
         }
     }
@@ -173,7 +173,7 @@ class ViewController: UIViewController {
             btn.isHidden = false
         }
     }
-
+    
     @objc func clearTapped(_ sender: UIButton) {
         currentAnswer.text = ""
         
