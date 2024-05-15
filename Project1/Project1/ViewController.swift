@@ -17,17 +17,18 @@ class ViewController: UITableViewController { //UIViewController is apple's defa
         title = "Storm Viewer"
         navigationController?.navigationBar.prefersLargeTitles = true
         //Added code - these variables disappear once viewDidLoad() is done
-        let fm = FileManager.default //built in system type that lets us work with files system - used to load file
-        let path = Bundle.main.resourcePath! //sets resource path of our app bundle. bundle -> directory containing compiled program and assets
-        var items = try! fm.contentsOfDirectory(atPath: path) // of all the files in the resource directory of the app
-        items = items.sorted()
-        for item in items{
-            if item.hasPrefix("nssl"){
-                pictures.append(item)
+        DispatchQueue.global(qos: .userInitiated).async{
+            let fm = FileManager.default //built in system type that lets us work with files system - used to load file
+            let path = Bundle.main.resourcePath! //sets resource path of our app bundle. bundle -> directory containing compiled program and assets
+            var items = try! fm.contentsOfDirectory(atPath: path) // of all the files in the resource directory of the app
+            items = items.sorted()
+            for item in items{
+                if item.hasPrefix("nssl"){
+                    self.pictures.append(item)
+                }
             }
         }
-        
-        print(pictures)
+//        print(pictures)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
