@@ -160,7 +160,7 @@ class ViewController: UIViewController {
         }else{
             let ac = UIAlertController(title: "Wrong Answer", message: nil, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
+            present(ac, animated: true) 
             currentAnswer.text = ""
         }
     }
