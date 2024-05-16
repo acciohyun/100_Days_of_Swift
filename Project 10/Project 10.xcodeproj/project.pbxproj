@@ -16,6 +16,7 @@
 		6B6C3BDF2BF58AA30025782A /* Project_10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3BDE2BF58AA30025782A /* Project_10Tests.swift */; };
 		6B6C3BE92BF58AA30025782A /* Project_10UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3BE82BF58AA30025782A /* Project_10UITests.swift */; };
 		6B6C3BEB2BF58AA30025782A /* Project_10UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3BEA2BF58AA30025782A /* Project_10UITestsLaunchTests.swift */; };
+		6B6C3BF82BF58DBD0025782A /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6C3BF72BF58DBD0025782A /* PersonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6B6C3BE42BF58AA30025782A /* Project 10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project 10UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B6C3BE82BF58AA30025782A /* Project_10UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_10UITests.swift; sourceTree = "<group>"; };
 		6B6C3BEA2BF58AA30025782A /* Project_10UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_10UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B6C3BF72BF58DBD0025782A /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				6B6C3BC92BF58AA10025782A /* SceneDelegate.swift */,
 				6B6C3BCB2BF58AA10025782A /* ViewController.swift */,
 				6B6C3BCD2BF58AA10025782A /* Main.storyboard */,
+				6B6C3BF72BF58DBD0025782A /* PersonCell.swift */,
 				6B6C3BD02BF58AA20025782A /* Assets.xcassets */,
 				6B6C3BD22BF58AA20025782A /* LaunchScreen.storyboard */,
 				6B6C3BD52BF58AA20025782A /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				6B6C3BCC2BF58AA10025782A /* ViewController.swift in Sources */,
 				6B6C3BC82BF58AA10025782A /* AppDelegate.swift in Sources */,
+				6B6C3BF82BF58DBD0025782A /* PersonCell.swift in Sources */,
 				6B6C3BCA2BF58AA10025782A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
