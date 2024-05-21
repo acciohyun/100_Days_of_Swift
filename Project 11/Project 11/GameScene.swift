@@ -8,6 +8,8 @@ class GameScene: SKScene {
         }
     }
     
+    var balls = ["ballRed", "ballBlue", "ballCyan", "ballGrey", "ballPurple", "ballYellow", "ballGreen"]
+    
     var editLabel: SKLabelNode!
     var editingMode: Bool = false{
         didSet{
@@ -75,7 +77,7 @@ class GameScene: SKScene {
                     
                     addChild(box)
                 }else{
-                    let ball = SKSpriteNode(imageNamed: "ballRed")
+                    let ball = SKSpriteNode(imageNamed: balls.randomElement() ?? "ballRed")
                     ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width / 2.0)
                     ball.physicsBody?.restitution = 0.4
                     ball.position = location
