@@ -13,7 +13,18 @@ class ViewController: UICollectionViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))    }
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
+            
+        let defaults = UserDefaults.standard
+        if let savedPeople = defaults.object(forKey: "people") as? Data{
+            let jsonDecoder = JSONDecoder()
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedPeople)
+            }catch{
+                print("Failed to load people")
+            }
+        }
+    }
 
 }
 
@@ -53,6 +64,7 @@ extension ViewController{
             person.name = newName
             
             self?.collectionView.reloadData()
+            self?.save()
         })
         
         present(ac, animated: true)
@@ -81,12 +93,24 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
         collectionView.reloadData()
-        
+        save()
         dismiss(animated: true)
     }
     
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+}
+
+extension ViewController{
+    func save(){
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(people){
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "people")
+        }else{
+            print("Failed to save people.")
+        }
     }
 }
