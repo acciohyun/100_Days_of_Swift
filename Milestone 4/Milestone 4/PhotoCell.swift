@@ -8,5 +8,6 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
-    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var name: UILabel!
 }

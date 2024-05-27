@@ -17,6 +17,7 @@
 		6B6E7F932C00AB5F00BC4B16 /* Milestone_4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E7F922C00AB5F00BC4B16 /* Milestone_4UITests.swift */; };
 		6B6E7F952C00AB5F00BC4B16 /* Milestone_4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E7F942C00AB5F00BC4B16 /* Milestone_4UITestsLaunchTests.swift */; };
 		6B6E7FA22C00AF2800BC4B16 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B6E7FA12C00AF2800BC4B16 /* Photo.swift */; };
+		6BE4837C2C019B4200FA49B7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE4837B2C019B4200FA49B7 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6B6E7F922C00AB5F00BC4B16 /* Milestone_4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone_4UITests.swift; sourceTree = "<group>"; };
 		6B6E7F942C00AB5F00BC4B16 /* Milestone_4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone_4UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6B6E7FA12C00AF2800BC4B16 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		6BE4837B2C019B4200FA49B7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				6B6E7F7A2C00AB5F00BC4B16 /* Assets.xcassets */,
 				6B6E7F7C2C00AB5F00BC4B16 /* LaunchScreen.storyboard */,
 				6B6E7F7F2C00AB5F00BC4B16 /* Info.plist */,
+				6BE4837B2C019B4200FA49B7 /* PhotoCell.swift */,
 			);
 			path = "Milestone 4";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6E7FA22C00AF2800BC4B16 /* Photo.swift in Sources */,
+				6BE4837C2C019B4200FA49B7 /* PhotoCell.swift in Sources */,
 				6B6E7F762C00AB5D00BC4B16 /* ViewController.swift in Sources */,
 				6B6E7F722C00AB5D00BC4B16 /* AppDelegate.swift in Sources */,
 				6B6E7F742C00AB5D00BC4B16 /* SceneDelegate.swift in Sources */,
