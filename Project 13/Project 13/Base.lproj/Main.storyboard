@@ -51,6 +51,9 @@
                                 <rect key="frame" x="13" y="605" width="126" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Change Filter"/>
+                                <connections>
+                                    <action selector="changeFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tux-Au-XGw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekh-E5-v44">
                                 <rect key="frame" x="284" y="605" width="93" height="44"/>
@@ -59,6 +62,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJA-3N-OVo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,7 +89,7 @@
                     <navigationItem key="navigationItem" id="Nlc-9q-fGa"/>
                     <connections>
                         <outlet property="imageView" destination="AhV-ZP-5W1" id="KbK-O7-87j"/>
-                        <outlet property="intensity" destination="t1f-nV-oKK" id="cqk-IW-rxe"/>
+                        <outlet property="intensity" destination="Cts-aT-ZGO" id="EyT-f1-vNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
