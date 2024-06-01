@@ -91,6 +91,11 @@ extension GameScene{
             gameOver.zPosition = 1
             addChild(gameOver)
             
+            let finalScore = SKLabelNode(text: "Final Score: \(score)")
+            finalScore.position = CGPoint(x: 512, y: 320)
+            finalScore.zPosition = 1
+            addChild(finalScore)
+            
             return
         }
         popupTime *= 0.991
