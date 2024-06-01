@@ -16,6 +16,7 @@
 		6B5321F72C0AC5A200A4DFA8 /* Project_15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5321F62C0AC5A200A4DFA8 /* Project_15Tests.swift */; };
 		6B5322012C0AC5A200A4DFA8 /* Project_15UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5322002C0AC5A200A4DFA8 /* Project_15UITests.swift */; };
 		6B5322032C0AC5A200A4DFA8 /* Project_15UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5322022C0AC5A200A4DFA8 /* Project_15UITestsLaunchTests.swift */; };
+		6B5322122C0AC74B00A4DFA8 /* penguin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B5322112C0AC74B00A4DFA8 /* penguin@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6B5321FC2C0AC5A200A4DFA8 /* Project 15UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project 15UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5322002C0AC5A200A4DFA8 /* Project_15UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_15UITests.swift; sourceTree = "<group>"; };
 		6B5322022C0AC5A200A4DFA8 /* Project_15UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_15UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6B5322112C0AC74B00A4DFA8 /* penguin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "penguin@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				6B5321DF2C0AC5A000A4DFA8 /* AppDelegate.swift */,
 				6B5321E12C0AC5A000A4DFA8 /* SceneDelegate.swift */,
 				6B5321E32C0AC5A000A4DFA8 /* ViewController.swift */,
+				6B5322102C0AC74300A4DFA8 /* Content */,
 				6B5321E52C0AC5A000A4DFA8 /* Main.storyboard */,
 				6B5321E82C0AC5A200A4DFA8 /* Assets.xcassets */,
 				6B5321EA2C0AC5A200A4DFA8 /* LaunchScreen.storyboard */,
@@ -125,6 +128,14 @@
 				6B5322022C0AC5A200A4DFA8 /* Project_15UITestsLaunchTests.swift */,
 			);
 			path = "Project 15UITests";
+			sourceTree = "<group>";
+		};
+		6B5322102C0AC74300A4DFA8 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				6B5322112C0AC74B00A4DFA8 /* penguin@2x.png */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B5321E92C0AC5A200A4DFA8 /* Assets.xcassets in Resources */,
+				6B5322122C0AC74B00A4DFA8 /* penguin@2x.png in Resources */,
 				6B5321EC2C0AC5A200A4DFA8 /* Base in Resources */,
 				6B5321E72C0AC5A000A4DFA8 /* Base in Resources */,
 			);
